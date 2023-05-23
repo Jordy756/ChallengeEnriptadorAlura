@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Encriptador</h1>
+    </header>
+
+    <main>
+
+        <section class="sectionInput">
+            <textarea class="inputField" id="inputField" cols="75" rows="17" value="" placeholder="Ingrese texto aquí"
+                required></textarea>
+            <span class="warning">&#9888 Solo letras minúsculas y sin acento</span>
+            <div class="buttons">
+                <button onclick="encryptText()">Encriptar</button>
+                <button onclick="decryptText()">Desencriptar</button>
+            </div>
+        </section>
+
+        <section class="sectionOutput">
+            <textarea class="outputField" id="outputField" cols="30" rows="30" value="" readonly></textarea>
+            <picture id="picture">
+                <img src="./Images/Muñeco.png" alt="Muñeco">
+            </picture>
+            <div id="text" class="text">
+                <span>Ningún mensaje fue encontrado</span>
+                <span>Ingresa el texto que desees encriptar o desencriptar.</span>
+            </div>
+            <button id="btn-copy" class="btn-copy" onclick="copyText()">Copiar</button>
+        </section>
+
+    </main>
+
+    <footer>
+        <span>&copy Yordi Castro Rojas</span>
+    </footer>
+</body>
+<script src="./index.js"></script>
+
+</html>

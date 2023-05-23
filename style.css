@@ -1,0 +1,212 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100vw;
+    background-color: #161717;
+    font-size: 1rem;
+    color: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+header {
+    margin: 3rem;
+    align-self: flex-start;
+}
+
+main {
+    width: 80vw;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+section {
+    margin: 1rem;
+    padding: 0.5rem;
+    height: 35rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+textarea {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    color: #f9f9f9;
+    font-size: 1.5rem;
+    resize: none;
+    outline: none;
+}
+
+button {
+    padding: 0.5rem 0rem;
+    font-size: 1rem;
+    border: none;
+    text-align: center;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    background-color: #ea4c89;
+    color: #f9f9f9;
+}
+
+button:hover {
+    box-shadow: 0 0 1rem 0.1rem #ea4c89;
+    opacity: 0.9;
+}
+
+/* Section 1*/
+
+.sectionInput {
+    width: 50%;
+    justify-content: start;
+}
+
+.warning {
+    align-self: flex-start;
+    margin: 5.7rem 0rem 1rem 1rem;
+}
+
+.buttons {
+    width: 80%;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.buttons button {
+    width: 40%;
+}
+
+/* Section 2 */
+.sectionOutput {
+    width: 25%;
+    position: relative;
+    border-radius: 1rem;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 0.5rem 0.1rem #f9f9f9;
+    animation: changeColor 10s infinite;
+}
+
+.sectionOutput textarea {
+    color: #161717;
+}
+
+picture {
+    width: 60%;
+    height: 30%;
+    position: absolute;
+    top: 30%;
+    left: 20%;
+}
+
+picture img {
+    width: 100%;
+    height: 100%;
+}
+
+.text {
+    width: 60%;
+    position: absolute;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    top: 60%;
+    left: 20%;
+    color: #161717;
+}
+
+.text span:first-child {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.btn-copy {
+    width: 40%;
+    margin-top: 0.5rem;
+    display: none;
+}
+
+footer {
+    margin-top: 2rem;
+}
+
+@keyframes changeColor {
+    0% {
+        box-shadow: 0 0 1rem 0.5rem #ff00ff;
+    }
+
+    25% {
+        box-shadow: 0 0 1rem 0.5rem #00ffff;
+    }
+
+    50% {
+        box-shadow: 0 0 1rem 0.5rem #00ff00;
+    }
+
+    75% {
+        box-shadow: 0 0 1rem 0.5rem #8000ff;
+    }
+
+    100% {
+        box-shadow: 0 0 1rem 0.5rem #ff00ff;
+    }
+}
+
+@media (max-width: 940px) {
+    main {
+        width: 80vw;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .sectionInput,
+    .sectionOutput {
+        width: 90%;
+        margin: 1rem auto;
+    }
+
+    .sectionInput {
+        height: 50vh;
+    }
+
+    .warning {
+        margin-top: 2rem;
+    }
+
+    .sectionOutput {
+        height: 9rem;
+    }
+
+    picture {
+        display: none;
+    }
+
+    img {
+        display: none;
+    }
+
+    .text {
+        width: 80%;
+        top: 30%;
+        left: 10%;
+    }
+
+    button {
+        font-size: 0.8rem;
+    }
+
+    .btn-copy {
+        top: 70%;
+    }
+}
